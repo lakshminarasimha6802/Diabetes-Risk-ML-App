@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Diabetes Risk ML App</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="brand">🩸 Diabetes Risk ML</a>
+      <div class="right">
+        <a href="/model/info" target="_blank" class="link">Model Info (JSON)</a>
+        <a href="/docs" target="_blank" class="link">API Docs</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="container small">
+      <strong>Note:</strong> Educational demo. Not for medical use.
+    </div>
+  </footer>
+</body>
+</html>

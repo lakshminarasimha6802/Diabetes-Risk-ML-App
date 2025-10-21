@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Welcome</h1>
+  <p>Enter your name and age to begin.</p>
+  <form method="post" action="/start" class="grid">
+    <label>
+      <span>Name</span>
+      <input type="text" name="name" required placeholder="Your name">
+    </label>
+    <label>
+      <span>Age</span>
+      <input type="number" name="age_display" min="1" max="120" required placeholder="Your age">
+    </label>
+    <button class="btn primary" type="submit">Continue →</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h2>Hello {{ name }} (Age {{ age_display }})</h2>
+  <p>Provide the clinical features (normalized). You can leave defaults as examples to try it out.</p>
+
+  <form method="post" action="/predict-ui" class="grid grid-2">
+    <input type="hidden" name="name" value="{{ name }}">
+    <input type="hidden" name="age_display" value="{{ age_display }}">
+
+    <label><span>age</span><input name="age" type="number" step="0.01" value="0.03" required></label>
+    <label><span>sex</span><input name="sex" type="number" step="0.01" value="0.05" required></label>
+    <label><span>bmi</span><input name="bmi" type="number" step="0.01" value="0.06" required></label>
+    <label><span>bp</span><input name="bp" type="number" step="0.01" value="0.04" required></label>
+    <label><span>s1</span><input name="s1" type="number" step="0.01" value="0.02" required></label>
+    <label><span>s2</span><input name="s2" type="number" step="0.01" value="-0.01" required></label>
+    <label><span>s3</span><input name="s3" type="number" step="0.01" value="-0.02" required></label>
+    <label><span>s4</span><input name="s4" type="number" step="0.01" value="0.03" required></label>
+    <label><span>s5</span><input name="s5" type="number" step="0.01" value="0.05" required></label>
+    <label><span>s6</span><input name="s6" type="number" step="0.01" value="0.02" required></label>
+
+    <button class="btn primary" type="submit">Predict Risk</button>
+    <a class="btn" href="/">← Home</a>
+  </form>
+</section>
+{% endblock %}

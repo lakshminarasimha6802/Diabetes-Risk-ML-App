@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h2>Results for {{ name }} (Age {{ age_display }})</h2>
+
+  {% if error %}
+    <div class="alert error">Error: {{ error }}</div>
+  {% else %}
+    <div class="result {{ 'high' if label == 'High Risk' else 'low' }}">
+      <strong>{{ label }}</strong>
+    </div>
+    <div class="prob">
+      <div>Low Risk: <code>{{ probs['Low Risk'] }}</code></div>
+      <div>High Risk: <code>{{ probs['High Risk'] }}</code></div>
+    </div>
+    <details class="details">
+      <summary>Show input features</summary>
+      <pre>{{ features | tojson(indent=2) }}</pre>
+    </details>
+  {% endif %}
+
+  <div class="actions">
+    <a class="btn" href="/">← Home</a>
+    <a class="btn" href="/docs" target="_blank">Open API docs</a>
+  </div>
+</section>
+{% endblock %}
