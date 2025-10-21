@@ -1,5 +1,5 @@
 # 🩸 Diabetes Risk ML App  
-
+🩸 This project is for educational purposes only. Predictions are not intended for real medical diagnosis or treatment.
 A complete **FastAPI + Machine Learning web application** that predicts diabetes risk using the **Scikit-Learn Diabetes Dataset**.  
 It includes:
 - A **web UI** built with HTML + CSS (Jinja2 templates)  
